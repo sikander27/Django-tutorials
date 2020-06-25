@@ -2,10 +2,19 @@
      <title>{% block title %}sikander {% endblock %}</title>
      {% block style_tag %}
      <style>
-      .fakeimg {
-          height: 200px;
-          background: #aaa;
-        }
+     .fakeimg {
+  height: 200px;
+  background: #aaa;
+};
+a:link, a:visited {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  };
+ a:active, a:hover {
+   padding: 3px;
+  };
       </style>
     {% endblock %}
     </head>
@@ -17,6 +26,14 @@
         
        
           <div class="col-sm-8">
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
             {% block content %}
             <h2>TITLE HEADING</h2>
             <h5>Title description, Dec 7, 2017</h5>
