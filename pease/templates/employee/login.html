@@ -11,6 +11,9 @@ l{% extends 'base/base.html' %}
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-info" type="submit">Login</button>
+                <small class="text-muted">
+                   Forget Password? <a class="ml-2" href="{% url 'password_reset' %}">Reset Password</a>
+                </small>
             </div>
         </form>
     </div>

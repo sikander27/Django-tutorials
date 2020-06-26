@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Password Set {% endblock %}
+{% block content %}
+    <div class="alert alert-info">
+        Congratulation.Your password has been set.
+    </div>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+       <a  href="{% url 'login' %}">Log In Here</a>
+        </small>
+    </div>
+{% endblock %}
+
